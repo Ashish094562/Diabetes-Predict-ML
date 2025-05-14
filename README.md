@@ -56,25 +56,25 @@ This project is built to assist early diagnosis of diabetes using patient data. 
 ## 📁 Project Structure
 
 Diabetes-Predict-ML/
-│
-├── Data/
-│ ├── diabetes_clean.csv
-│ ├── diabetes_prediction_dataset.csv
-│ └── diabetes_inputs.db
-│
-├── templates/
-│ └── index.html # Frontend HTML form
-│
-├── app.py # Flask app entry point
-├── db.py # Database operations
-├── user_data.py # Handles user data preprocessing
-├── clean.ipynb # Data cleaning notebook
-├── EDA.ipynb # Exploratory Data Analysis
-├── Diabetes_prediction.ipynb # Model training & ensemble logic
-├── diabetes_model.pkl # Saved model
-├── performance_report.txt # Model evaluation metrics
-├── requirements.txt # Dependencies
-└── render.yaml # Deployment config (Render)
+-│
+-├── Data/
+-│ ├── diabetes_clean.csv
+-│ ├── diabetes_prediction_dataset.csv
+-│ └── diabetes_inputs.db
+-│
+-├── templates/
+-│ └── index.html # Frontend HTML form
+-│
+-├── app.py # Flask app entry point
+-├── db.py # Database operations
+-├── user_data.py # Handles user data preprocessing
+-├── clean.ipynb # Data cleaning notebook
+-├── EDA.ipynb # Exploratory Data Analysis
+-├── Diabetes_prediction.ipynb # Model training & ensemble logic
+-├── diabetes_model.pkl # Saved model
+-├── performance_report.txt # Model evaluation metrics
+-├── requirements.txt # Dependencies
+-└── render.yaml # Deployment config (Render)
 
 
 ---
