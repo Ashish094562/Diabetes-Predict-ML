@@ -1,20 +1,20 @@
 Model: Stacked Ensemble
-Accuracy: 0.9600
-Precision: 0.8325
-Recall: 0.6663
-F1 Score: 0.7402
-ROC-AUC: 0.9680
+Accuracy: 0.9596
+Precision: 0.8190
+Recall: 0.6756
+F1 Score: 0.7405
+ROC-AUC: 0.9710
 
 Classification Report:
               precision    recall  f1-score   support
 
            0       0.97      0.99      0.98     18292
-           1       0.83      0.67      0.74      1708
+           1       0.82      0.68      0.74      1708
 
     accuracy                           0.96     20000
-   macro avg       0.90      0.83      0.86     20000
+   macro avg       0.89      0.83      0.86     20000
 weighted avg       0.96      0.96      0.96     20000
 
 Confusion Matrix:
-[[18063   229]
- [  570  1138]]
+[[18037   255]
+ [  554  1154]]
