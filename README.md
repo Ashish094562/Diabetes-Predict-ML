@@ -3,7 +3,10 @@
 A Machine Learning web application that predicts whether a person is diabetic based on health parameters using an ensemble of **Logistic Regression** and **XGBoost** models.
 
 ---
-🚀 **[Live Demo](https://diabetes-predict-ml.onrender.com)**  
+## 🌐 Live Demo
+
+🚀 Try the application live here:  
+🔗 [https://diabetes-predict-ml.onrender.com](https://diabetes-predict-ml.onrender.com)
 ---
 ## 🚀 Project Overview
 
