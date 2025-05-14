@@ -3,7 +3,8 @@
 A Machine Learning web application that predicts whether a person is diabetic based on health parameters using an ensemble of **Logistic Regression** and **XGBoost** models.
 
 ---
-
+🚀 **[Live Demo](https://diabetes-predict-ml.onrender.com)**  
+---
 ## 🚀 Project Overview
 
 This project is built to assist early diagnosis of diabetes using patient data. It utilizes an ensemble model combining Logistic Regression and XGBoost to achieve high accuracy even on imbalanced datasets. A web interface built using **Flask** allows users to input health parameters and receive predictions instantly.
