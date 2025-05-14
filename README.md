@@ -36,8 +36,10 @@ This project is built to assist early diagnosis of diabetes using patient data. 
 
 ### 🛠️ Tools & Platforms
 - **Jupyter Notebook** – EDA, model training
-- **Pickle** – Model serialization
+- **Vscode** - For Flask work
+- **joblib** – Model serialization
 - **Render** – Deployment
+  
 
 ---
 
@@ -46,6 +48,7 @@ This project is built to assist early diagnosis of diabetes using patient data. 
 
 - **Logistic Regression**: A simple, interpretable algorithm great for binary classification.
 - **XGBoost Classifier**: A powerful gradient boosting method well-suited for handling imbalance and nonlinear patterns.
+- **SMOTE** : A resampling algorithm used specifically in imbalanced classification problems.
 - **Ensemble Approach**: Combines both models using soft voting to improve overall predictive performance.
 
 ---
