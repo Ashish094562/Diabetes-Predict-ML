@@ -127,5 +127,5 @@ python app.py
 This project is configured to be deployed on Render. Use the render.yaml file to set up your web service.
 
 ## 🧑‍💻 Author
-GitHub: Ashish094562
-GitHub: Nikhilkr72
+-GitHub: [Ashish094562](https://github.com/Ashish094562/)
+-GitHub: [Nikhilkr72](https://github.com/Nikhill72/)
