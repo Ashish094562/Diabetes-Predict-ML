@@ -350,15 +350,12 @@
             margin-bottom: 20px;
         }
 
-        .low-risk {
+        .notdiabetic {
             color: #28a745;
         }
 
-        .medium-risk {
-            color: #ffc107;
-        }
-
-        .high-risk {
+        
+        .diabetic {
             color: #dc3545;
         }
 
@@ -791,8 +788,8 @@
     <section class="hero" id="home">
         <div class="hero-content animate__animated animate__fadeIn">
             <h1>Take Control of Your Health</h1>
-            <p>Our advanced machine learning model helps you assess your diabetes risk based on key health indicators. Get personalized results in seconds.</p>
-            <a href="#predict" class="btn btn-primary animate__animated animate__pulse animate__infinite animate__slower">Check Your Risk Now</a>
+            <p>Our advanced machine learning model helps you assess your diabetes based on key health indicators. Get personalized results in seconds.</p>
+            <a href="#predict" class="btn btn-primary animate__animated animate__pulse animate__infinite animate__slower">Check Now</a>
         </div>
     </section>
 
@@ -800,8 +797,8 @@
     <section class="prediction-section" id="predict">
         <div class="container">
             <div class="section-title animate__animated animate__fadeIn">
-                <h2>Diabetes Risk Assessment</h2>
-                <p>Fill out the form below to get your personalized diabetes risk prediction. All information is kept confidential.</p>
+                <h2>Diabetes Assessment</h2>
+                <p>Fill out the form below to get your personalized diabetes prediction. All information is kept confidential.</p>
             </div>
             
             <form id="prediction-form" class="prediction-form animate__animated animate__fadeInUp">
@@ -870,7 +867,7 @@
                 </div>
 
                 <button type="submit" class="submit-btn" id="predict-btn" value="Predict">
-                    <i class="fas fa-calculator" ></i> Calculate My Risk
+                    <i class="fas fa-calculator" ></i>Predict
                 </button>
            <div class="result" style="
             margin: 23px;
@@ -880,11 +877,11 @@
             </form>
 
             <div class="result-container" id="result-container">
-                <h3 class="result-title">Your Diabetes Risk Assessment:</h3>
+                <h3 class="result-title">Your Diabetes Assessment:</h3>
                 <div class="risk-level" id="risk-level"><span id="predicted-risk">{{result}}</span></div>
 
                 <p class="recommendation" id="recommendation">
-                    Based on your inputs, you have a high risk of developing diabetes. 
+                    Based on your inputs, you have developing diabetes. 
                     Continue maintaining a healthy lifestyle with balanced nutrition and regular physical activity.
                 </p>
                 <a href="https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639" class="btn" style="margin-top: 20px;">
@@ -897,7 +894,7 @@
         <div class="container">
             <div class="section-title animate__animated animate__fadeIn">
                 <h2>Why Use Our Tool?</h2>
-                <p>Our diabetes prediction tool offers several advantages to help you understand and manage your health risks.</p>
+                <p>Our diabetes prediction tool offers several advantages to help you understand and manage your health Check.</p>
             </div>
             
             <div class="features-grid">
@@ -906,7 +903,7 @@
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>ML Model</h3>
-                    <p>Our machine learning algorithm has been trained on thousands of cases to provide accurate risk assessments based on your unique health profile.</p>
+                    <p>Our machine learning algorithm has been trained on thousands of cases to provide accurate assessments based on your unique health profile.</p>
                 </div>
                 
                 <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
@@ -922,7 +919,7 @@
                         <i class="fas fa-book-medical"></i>
                     </div>
                     <h3>Project Info</h3>
-                    <p>We used Random Forest for model prediction with the accuracy 97% and for simplicity we used pipline and also done Scaling the data.</p>
+                    <p>We used <b>Logistic Regression,XGboost</b> and <b>Ensemble</b> both of them with <b>Stacking</b> and used piplines for simplicity and less code and able to gain 96% accuracy.</p>
                 </div>
             </div>
         </div>
@@ -940,7 +937,7 @@
                     <img src="https://media.licdn.com/dms/image/v2/D5603AQFaXUOl0q_czQ/profile-displayphoto-shrink_400_400/B56ZaEzP9bGkAk-/0/1745984752334?e=1751500800&v=beta&t=LH_MLWNZrT29dp1IdBUa5ukHEmuWFThr6qQ33LSvk8I" alt="Ashish singh" class="contributor-img">
                     <h3>Ashish singh</h3>
                     <p class="contributor-role">ML Student</p>
-                    <p>A passionate Machine Learning student who developed a predictive model for early diabetes detection using health data. Skilled in data analysis, model building, and real-world healthcare applications.</p>
+                    <p>A passionate Machine Learning student who developed a predictive model for early diabetes detection using health data. Skilled in data analysis, model building, and ML applications.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/ashish-singh-768060253/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/Ashish094562" target="_blank"><i class="fab fa-github"></i></a>
@@ -983,7 +980,7 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#predict">Risk Assessment</a></li>
+                        <li><a href="#predict">Assessment</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#team">Our Team</a></li>
                         
@@ -1038,12 +1035,12 @@ document.getElementById("prediction-form").addEventListener("submit", function(e
 const riskElement = document.getElementById("predicted-risk");
 const recommendation = document.getElementById("recommendation");
 
-if (riskText.includes("low")) {
+if (riskText.includes("notdiabetic")) {
     riskElement.style.color = "#4361ee"; 
-    recommendation.textContent = "Based on your inputs, you have a low risk of developing diabetes. Keep up your healthy lifestyle with proper diet and regular physical activity.";
-} else if (riskText.includes("high")) {
+    recommendation.textContent = "Based on your inputs, you do not have any signs of diabetes. Keep up your healthy lifestyle with proper diet and regular physical activity.";
+} else if (riskText.includes("diabetic")) {
     riskElement.style.color = "red"; 
-    recommendation.textContent = "Based on your inputs, you have a high risk of developing diabetes. It's strongly recommended to consult a healthcare provider and consider lifestyle adjustments.";
+    recommendation.textContent = "Based on your inputs, you are diabetic. It's strongly recommended to consult a healthcare provider and consider lifestyle adjustments.";
 } else {
     riskElement.style.color = "black"; 
     recommendation.textContent = "Please ensure all inputs are correct to receive an accurate prediction.";

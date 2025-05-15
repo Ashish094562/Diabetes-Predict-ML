@@ -30,9 +30,9 @@ def predict():
     input_data['diabetes'] = int(res)
     insert_patient_data(input_data)
     if result == 0:
-        result = 'Low risk'
+        result = 'NotDiabetic'
     else:
-        result = 'High risk'
+        result = 'Diabetic'
     
     return jsonify({"result": result})
 
